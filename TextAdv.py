@@ -15,19 +15,32 @@ class Tool:
     def __init__(self, name):
         self.name = name
 
+class Text:
+    def __init__(self, name, body):
+        self.name = name
+        self.body = body
 
 Inventory = []
 
 
-print(""" 
+title = ("""
 ==================================================
         The Mystery of Meridian Island
 ==================================================
 """)
 
+for char in title:
+    print(char, end="", flush=True)
+    time.sleep(0.1)
+
 StartGame = True
 while StartGame == True:
-    StartScreen = input("Are you ready to brave Meridian Island? Y, N\n: ")
+    READY = ("Are you ready to brave Meridian Island? Y, N\n: ")
+    for char in READY:
+        print(char, end="", flush=True)
+        time.sleep(0.1)
+
+    StartScreen = input()
 
     if StartScreen == "y" or StartScreen == "Y":
         break
@@ -39,6 +52,9 @@ while StartGame == True:
 
 
 Name = input("Who are you?\n: ")
+for char in Name:
+    print(char, end="", flush=True)
+    time.sleep(0.1)
 print("\n")
 
 while GameLoop == True:
