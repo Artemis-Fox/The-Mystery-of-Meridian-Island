@@ -51,10 +51,11 @@ while StartGame == True:
         continue
 
 
-Name = input("Who are you?\n: ")
-for char in Name:
+NAME = ("Who are you?\n: ")
+for char in NAME:
     print(char, end="", flush=True)
     time.sleep(0.1)
+Name = input()
 print("\n")
 
 while GameLoop == True:
@@ -71,12 +72,11 @@ while GameLoop == True:
 
     while beach.InRoom == True:
 
-        print(Name + ", You wake up face down, the feel of sand on your face and the sound of the waves close by. \n Lifting yourself up, you are on a beach. Behind you the ocean stretches past the horizon with the remains of a ship bobbing up and down with the waves\n")
-        print("You start to remember what happened, you where on that ship. It was a Carrack, a large vessle of 150 feet (45 meters) in length with a crew of 40 men. Her name was EV Pathfinder, and it seems you are the only surviver of her crash.\n")
-        print("Suddenly, a voice calls out to you! looking in the direction you see a skull with a single golden tooth.\n")
-        print("Looks like yer in a bit of a pickle matey. My names Hardwin and if you dont want to end up like me yer gonna need my help to escape.... \n")
-        print("MERIDIAN ISLAND!\n")
-        print("--Hardwin added to inventory--\n")
+        BeachText = (Name + """, you find yourself face first in the sand. The sounds of waves crashing crashing on the shore fill your ears.\n You pick yourself up, behind you see the wreckage of your ship. The wreckage bobs up and down in the water, it seems you are the only survivor.\n *Ah, seems we've got a live un here.* The voice comes from near by, but looking around there is no obvious source. *I'm over here ya nitwit*\n Following the voice you find the source, a skull wearing an ipatch and a bandana. *So yer eyes do work, I'm Hardwin. Welcome to Merridian Island, a horror ridden pox of an island. If you want to srvive matey, you'll need my help. plus it gets me off the island as well, its a win win!*\n You could almost sense a sly smile from Hardwin as he said that.\n ---Hardwin Added to inventory---\n""")
+        for char in BeachText:
+            print(char, end="", flush=True)
+            time.sleep(0.1)
+
         Inventory.append(Hardwin)
 
         BeachChoice = input("What do you do now?\n 1. go into the woods\n 2. go down the coast\n 3. look around\n: ")
@@ -95,14 +95,7 @@ while GameLoop == True:
             print("gay")
 
     while beach.InRoom == False and forest.InRoom == True:
-        print("You enter deeper into the forrest, the sounds of the waves slowly fade as the caws of birds and the chittering of bugs fill your ears. \n")
-        print("you decide to pick up a cool stick you found along your way was you explore\n")
-        print("---Cool Stick added to inventory!---\n")
-        Inventory.append(CoolStick)
-        print("After what feels like hours, you find yourself at the foot of an imposing structure. It must be some sort of temple, seems to be 9.. no 10 stories tall!\n")
-        print("The Temple looks worn, weathered, like a hand me down leather coat.\n")
-        print("Hardwin pipes up\n")
-        print("I hope yer ready matey. once you go in there, no turning back.\n")
+        ForrestText = ("""As you enter the forrest the sounds of the beach slowly fade behind you, replaced by the chitter of insects and the caws of birds.\n *Be careful here lad*""")
 
         ForrestChoice = input("what will you do now?\n 1. Go into the temple\n 2. Turn around\n 3.Description\n: ")
 
