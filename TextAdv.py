@@ -95,7 +95,11 @@ while GameLoop == True:
             print("gay")
 
     while beach.InRoom == False and forest.InRoom == True:
-        ForrestText = ("""As you enter the forrest the sounds of the beach slowly fade behind you, replaced by the chitter of insects and the caws of birds.\n *Be careful here lad*""")
+        ForrestText = ("""As you enter the forrest the sounds of the beach slowly fade behind you, replaced by the chitter of insects and the caws of birds.\n *Be careful here lad*\n You continue to sneak your way through the forrest. You hear things like the breaking of branches and maybe even some growls. but you're lucky it seems what ever in the forrest didn't see you, or at least didn't think you would taste good. \n eventually after what feels like hours of trudging through the forrest. You find yourself at the steps of a temple. It's crumbling visage belies how ancient this place truly is.\n It's huge, must be over 8 stories tall at least. and who knows how deep it goes underground?""")
+
+    for char in ForrestText:
+        print(char, end="", flush=True)
+        time.sleep(0.1)
 
         ForrestChoice = input("what will you do now?\n 1. Go into the temple\n 2. Turn around\n 3.Description\n: ")
 
@@ -111,7 +115,7 @@ while GameLoop == True:
             print(forest.descrption)
         else:
             print("gay")
-    
+
     while temple.InRoom == True:
         print("You climb the steps of the temple and reach a large locked door, a hole in the shape of a skull carved in it.\n")
         print("Told ya would need me! You feel like Hardwin would be giving you a smirk if he could\n")
